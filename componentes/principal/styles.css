@@ -8,6 +8,8 @@
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
+    --colorfiltro: invert(63%) sepia(37%) saturate(5151%) 
+    hue-rotate(80deg) brightness(110%) contrast(83%);
 }
 *{
     margin: 0;
@@ -30,7 +32,7 @@ body{
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.7); 
     height: 130px;
     top: 0;
@@ -61,17 +63,30 @@ body{
 }
 
 
+
 .navbar-left ul li a,.navbar-right ul li a{
     text-decoration: none;
     padding: 4px;
     color: #25d028;
+    font-size: var(--lg);
+   text-transform: uppercase;
 
 }
 .navbar-left ul li, .navbar-right ul li{
     margin: 10px;
 
 }
-
+.navbar-right .button_menu{
+ margin: 5px;
+ padding: 5px;
+}
+.menu_icon{
+    height: 50px;
+    height: 50px;
+}
+.navbar-right .button_menu input, .menu_icon{
+    display: none;
+}
 .oferts{
     display: flex;
     justify-content: center;
@@ -213,12 +228,13 @@ input[type=radio] {
     align-items: center;
     margin: 10px;
     font-size: 24px;
-
+    color: black;
     
 }
 .facebook_logo , .whatsapp_logo {
     margin:10px;
     list-style: none;
+
 }
 .facebook_logo img, .whatsapp_logo img{
     margin: 10px;
@@ -236,5 +252,54 @@ input[type=radio] {
     border: 5px solid #075E54 ;
     background: #075E54;
     color: #fff; 
- 
 }
+@media screen and (width <= 768px) {
+    body{
+        margin-top: 130px;
+    }
+    #nav-principal{
+        position: fixed;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .navbar-logo {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        padding: auto;
+    }
+    .navbar-left ul {
+        position: fixed;
+        width: 69%;
+        top: 129px;
+        right: 0px;
+        height: 100vh;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;  
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+    } 
+    .menu_icon{
+        display: block;
+        filter: var(--colorfiltro);
+    }
+    #check:checked ~ .navbar-left ul{
+       background-color: red;
+    }
+    .navbar-right .button_menu input{
+        display: block;
+    }
+    .navbar-left ul li a,.navbar-right ul li a{
+        padding: 2px;
+        color: #25d028;
+        font-size: var(--md);
+        text-transform: uppercase;
+    
+    }
+    
+    
+  
+}
+

@@ -4,16 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <title>Sagitario Store</title>
 </head>
 
 <body>
     <header>
+        <nav>
         <div id="nav-principal">
+            
             <img src="./imagenes/logo.jpg" alt="Logo de Sagitario Store" class="navbar-logo">
             <div class="navbar-left">
-                <nav>
+               
                     <ul>
                         <li>
                             <a href="/">Inicio</a>
@@ -25,7 +29,7 @@
                             <input type="text" placeholder="Buscar">
                         </li>
                     </ul>
-                </nav>
+               
             </div>
             <div class="navbar-right">
                 <ul>
@@ -37,10 +41,19 @@
                     </li>
                     <li class="navbar-shopping-cart">
                         <img src="./iconos/icon_shopping_cart.svg" alt="Ícono de carrito de compras" width="50" height="50">
-                    </li>
+                        
+                    <li class="button_menu">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                       <img class="menu_icon" src="./iconos/icons8-menú-30.png" alt="menu-icon">
+                    </label>
+                
                 </ul>
+             
             </div>
+             
         </div>
+    </nav>
     </header>
     <main>
         <h1>Sagitario Store</h1>
@@ -75,7 +88,7 @@
             </div>
         </div>
        <h1>Ofertas</h1>
-        <section class="oferts">
+        <div class="oferts">
             <div class="products-container">
                 <div class="product-card">
                     <div class="img-product">
@@ -156,7 +169,7 @@
                 </div>
 
             </div>
-        </section>
+        </div>
     </main>
     <footer>
         <h1>Contactanos</h1>
@@ -178,6 +191,7 @@
                     </a>
                    
                 </li>
+            
             </ul>
         </div>
     </footer>
