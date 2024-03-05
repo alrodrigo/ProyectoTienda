@@ -324,6 +324,11 @@ footer{
         height: 300px;
 
     }
+    .navbar-user img, .navbar-shopping-cart img{
+        width: 35px;
+        height: 35px;
+    
+    }
     
 }
 
