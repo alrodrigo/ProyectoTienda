@@ -1,0 +1,160 @@
+:root {
+    --Medio: #25d028;
+    --fondo: #ffffff;
+    --gris_oscuro: #333333;
+    --black: #000000;
+    --Azul_pastel: #ADD8E6;
+    --Azul_oscuro: #00008B;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --colorfiltro: invert(63%) sepia(37%) saturate(5151%) 
+    hue-rotate(80deg) brightness(110%) contrast(83%);
+}
+.navbar-logo{
+    width: 125px;
+    height: 125px;
+    margin: 15px 15px 15px 15px;
+    padding: 5px;
+    border-radius: 30px;
+  }
+  #nav-principal{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-around;
+      background-color: rgba(0, 0, 0, 0.7); 
+      height: 130px;
+      top: 0;
+      
+  }
+  .navbar-left {
+      flex-grow: 1;
+  }
+  .navbar-right{
+      flex-grow: 2;
+      
+  }
+  .navbar-left ul,
+  .navbar-right ul {
+      list-style: none;
+      padding: 0;
+      margin: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      
+  }
+  .navbar-user, .navbar-shopping-cart{
+      filter: invert(63%) sepia(37%) saturate(5151%) 
+      hue-rotate(80deg) brightness(110%) contrast(83%); 
+  
+  }
+  
+  
+  
+  .navbar-left ul li a,.navbar-right ul li a{
+      text-decoration: none;
+      padding: 4px;
+      color: #25d028;
+      font-size: var(--lg);
+     text-transform: uppercase;
+  
+  }
+  .navbar-left ul li, .navbar-right ul li{
+      margin: 10px;
+  
+  }
+  .navbar-right .button_menu{
+   margin: 5px;
+   padding: 5px;
+  }
+  .menu_icon{
+      height: 50px;
+      height: 50px;
+  }
+  .navbar-right .button_menu input, .menu_icon{
+      display: none;
+  }
+body{
+    background-color: var(--fondo);
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+}
+h1{
+    text-align: center;
+}
+form{
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+form input{
+    width: 100%;
+    margin: 10px 0 10px 0;
+    min-height: 2em;
+    border-radius: 5px;
+    padding: 5px;
+}
+input{
+    background-color: var(--Medio);
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+  
+}
+label{
+    text-transform: uppercase;
+}
+.password-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.bx{
+    font-size: 30px;
+    transform: translate(-35px);
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+.RedesSociales{
+    display: flex;
+    justify-content: start;
+    margin: 10px;
+    padding: 5px;
+}
+.facebook_logo a, .whatsapp_logo a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    font-size: 24px;
+    color: black;
+    
+}
+.facebook_logo , .whatsapp_logo {
+    margin:10px;
+    list-style: none;
+
+}
+.facebook_logo img, .whatsapp_logo img{
+    margin: 10px;
+ 
+
+}
+.RedesSociales .facebook_logo a:hover{
+    border-radius: 10px;
+    border: 5px solid #4267B2 ;
+   background: #4267B2;
+    color: #fff; 
+}
+.RedesSociales .whatsapp_logo a:hover{
+    border-radius: 5px;
+    border: 5px solid #075E54 ;
+    background: #075E54;
+    color: #fff; 
+}
