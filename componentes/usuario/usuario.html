@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="usuario.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <title>Crear Cuenta</title>
 </head>
 
 <body>
@@ -65,37 +65,44 @@
         <input type="email" id="email" required>
         <label for="contraseña">contraseña</label>
         <div class="password-container">
-        
             <input type="password" id="contraseña" pattern="[a-z0-5]{8,}" required>
             <i class='bx bx-show-alt'></i>
         </div>
 
     </form>
     <footer>
-        <h1>Contactanos</h1>
-        <div class="RedesSociales">
-            <ul>
-                <li class="facebook_logo">
+        <div class="footer-wraper">
+            <div class="letrero">
+                <h1>Contáctanos</h1>
+            </div>
+           
+            <div class="RedesSociales">
+                <ul>
+                    <li class="facebook_logo">
+                        <a id="facebook" target="_blank" href="https://www.facebook.com/sagitariostorebo">
+                            <img src="./iconos/facebook.png" alt="logo_facebook" width="50px" height="50px">
+                            <p>Visita la página</p>
+                        </a>
+                    </li>
+                    <li class="whatsapp_logo">
+                        <a target="_blank" href="">
+                            <img src="./iconos/whatsapp.png" alt="logo_whatsapp" width="50px" height="50px">
+                            <p>Chatea en WhatsApp</p>
+                        </a>
 
-                    <a id="facebook" target="_blank" href="https://www.facebook.com/sagitariostorebo">
-                        <img src="./iconos/facebook.png" alt="logo_facebook" width="50px" height="50px">
-                        <p>Visita la pagina</p>
-                    </a>
+                    </li>
+                    <li class="whatsapp_logo">
+                        <a target="_blank" href="">
+                            <img src="./iconos/whatsapp.png" alt="logo_whatsapp" width="50px" height="50px">
+                            <p>Únete a nuestro grupo de WhatsApp</p>
+                        </a>
 
-
-                </li>
-                <li class="whatsapp_logo">
-                    <a target="_blank" href="">
-                        <img src="./iconos/whatsapp.png" alt="logo_whatsapp" width="50px" height="50px">
-                        <p>Chatea en whatsapp</p>
-                    </a>
-
-                </li>
-
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
-    <script></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

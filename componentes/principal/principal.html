@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">   
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-   
+
     <title>Sagitario Store</title>
 </head>
 
 <body>
     <header>
         <nav>
-        <div id="nav-principal">
-            
-            <img src="./imagenes/logo.jpg" alt="Logo de Sagitario Store" class="navbar-logo">
-            <div class="navbar-left">
-               
+            <div id="nav-principal">
+
+                <img src="./imagenes/logo.jpg" alt="Logo de Sagitario Store" class="navbar-logo">
+                <div class="navbar-left">
+
                     <ul>
                         <li>
                             <a href="/">Inicio</a>
@@ -29,65 +29,59 @@
                             <input type="text" placeholder="Buscar">
                         </li>
                     </ul>
-               
+
+                </div>
+                <div class="navbar-right">
+                    <ul>
+                        <li>
+                            <a href="/">Iniciar Sesión</a>
+                        </li>
+                        <li class="navbar-user">
+                            <img src="./iconos/icon_user.png" alt="Ícono de usuario" width="50" height="50">
+                        </li>
+                        <li class="navbar-shopping-cart">
+                            <img src="./iconos/icon_shopping_cart.svg" alt="Ícono de carrito de compras" width="50"
+                                height="50">
+
+                        <li class="button_menu">
+                            <input type="checkbox" id="check">
+                            <label for="check" class="checkbtn">
+                                <img class="menu_icon" src="./iconos/icons8-menú-30.png" alt="menu-icon">
+                            </label>
+
+                    </ul>
+
+                </div>
+
             </div>
-            <div class="navbar-right">
-                <ul>
-                    <li>
-                        <a href="/">Iniciar Sesión</a>
-                    </li>
-                    <li class="navbar-user">
-                        <img src="./iconos/icon_user.png" alt="Ícono de usuario" width="50" height="50">
-                    </li>
-                    <li class="navbar-shopping-cart">
-                        <img src="./iconos/icon_shopping_cart.svg" alt="Ícono de carrito de compras" width="50" height="50">
-                        
-                    <li class="button_menu">
-                    <input type="checkbox" id="check">
-                    <label for="check" class="checkbtn">
-                       <img class="menu_icon" src="./iconos/icons8-menú-30.png" alt="menu-icon">
-                    </label>
-                
-                </ul>
-             
-            </div>
-             
-        </div>
-    </nav>
+        </nav>
     </header>
     <main>
         <h1>Sagitario Store</h1>
-        <div class="slider">
-            <input type="radio" name="slider" id="slide1" checked>
-            <input type="radio" name="slider" id="slide2">
-            <input type="radio" name="slider" id="slide3">
-            <div id="slides">
-                <div id="overflow">
-                    <div class="inner">
-                        <div class="slide slide_1">
-                            <img src="./imagenes/slider.jpg "  alt="Slide 1">
-                        </div>
-                        <div class="slide slide_2">
-                            <img src="./imagenes/slider.jpg" alt="Slide 2">
-                        </div>
-                        <div class="slide slide_3">
-                            <img src="./imagenes/slider.jpg" alt="Slide 3">
-                        </div>
+        <div class="container">
+            <div class="slider">
+                <div class="carruseles" id="slider">
+                    <section class="slider-section">
+                        <img src="./imagenes/slider.jpg" class="slider-image" alt="Imagen del slider">
+                    </section>
+                    <section class="slider-section">
+                        <img src="./imagenes/slider3.jpg" class="slider-image" alt="Imagen del slider">
+                    </section>
+                    <section class="slider-section">
+                        <img src="./imagenes/slider2.jpg" class="slider-image" alt="Imagen del slider">
+                    </section>
+                </div>
+                <div class="btn-container">
+                    <div class="btn-left"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjhJREFUSEuNlS1vVUEQhp/JrWgQTR0kdSQNuoY/UPgDVeXDIBCQNAFbUYIgpAGDAVUCCQZQKBBYZP9BHYqQEJKKqnY4u2fv7uzunMs9as9+zMf7vjMjhE8Ajav8OVvlqj2M63pD0LQliD33jXbW6kicv/ZFncFU6Cn+KroQKVwF3gGXgWvBWLkzms4OFmbjJ/IAeAlcKv5buAzq0XNHikvQFZQPwHbD3xhww6WLYnHWUb8DHAHrwF+E+yif/QxIJCcbPgp5dw3kNeiddP07cBfhVxbNHHI/g5qcJq1t4D3IBugp8BjkyGh7LtQCUYqrwqyQnE9XUTkUdE/H6H4At4CfTcGMDsYYK1p6FZXQtxA+orIp6JkK+yivBLSpyfBirg3pi66neAayL+iBCisox8Auwkl+bMJNljVpP2ZQSb/R/kzhG8gN0PMhsicgzwdnF718K0PWbA1R00pmwNcB65sC5wOcT0GegV70iVb1YRwYdhMfiZWkIogQDUYPgBXgWGBX4cTtiqPnXkUmQafQoqktjSSzCZyRSI6E9sVdQVQMhqAXf6vAIbCXOlYvU5tBkmlV+wubcSEoFRobAqcqPELlrS20KUQmMnAGCKwNLfkNcNu0irD+bcaVtDwZB5lkK+OIjG18Ajsam52sg/4B7gFfJivZny8Lp07w2bTrfH+Jdj1lu6nIJMyHwIt64NSqGWfyf6TkH+eXYWR+EgjVfr29a4a+Q6zjfRlI22SzwvwpZnvOcvlaB/8AYnPrHZyVqkMAAAAASUVORK5CYII=" /></i>
+                    </div>
+                    <div class="btn-right"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAitJREFUSEuVlj1rVUEQhp8hKSwUtEqVTrDMD7BNIfYSCWnEj8JKIUVSKYYkXQohpEgbESH4A8Q09uIPCEQQhHRKihAIl8k9+5Eze3f2XLJw4ZzZvfP1vvPuEa6XANq/uk+CoM6pAXvl1jH0TtNmKxfH3pm89Qf4jfAMlZOqMusoPLcjmgBFdrlX5yCroHtML9VttvixRUPW/eYRwgoqp729/Gf/VpbXCHCN4xNgH7gL/AeeA19jqhbYVrCYo7dii6KPOYEDhcV08BPwGuQsgD+IAUyrwCbwAmQH9A7wF1gGfnjZ2Zh1BbHaDPLEvsyDfgYeQsDpI7A2/l3489S1YHLF8BFkv4XdibfAJnAL4RhlCfhVuEplTGORdE2upjdW+QD4grCAcinwQWEbGBUt8ulVtmhgrmZTi94DM8B3kEego1zNDTGwTQhhZxHWx5i9E5hR+AY87qroqTxEU4tBPZH3gUNgAbgcV7CBsIVm54nnFY0Ti4xwmBQCHh0D3gBbAWQ4BgtyITmWRQlMS9NosmseSDQNO4mmcuELoqRBq6cx66MYQXrZDZqgt9UZtIoIKa0CZBPHDJrMgR4QpCKcSFLBWWOGiovLBCjEK6vpMiq7oPeAfyCvQA+zyvYJOfnXILoBsjofKawAp37WDcnspKBmXzhsLhxWAefCKZ02BrbUIlPyT0FHKjxFOWkkUdC39cEQMSjEY/KOddwPUcbwL1+KbgNbJbeY43/OwBWITOQhN4+5KgAAAABJRU5ErkJggg==" />
                     </div>
                 </div>
             </div>
-            <div id="controls">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-            </div>
-            <div id="bullets">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-            </div>
         </div>
-       <h1>Ofertas</h1>
+        <h1>Ofertas</h1>
         <div class="oferts">
             <div class="products-container">
                 <div class="product-card">
@@ -174,30 +168,38 @@
     </main>
 
     <footer>
-        <h1>Contactanos</h1>
-        <div class="RedesSociales">
-            <ul>
-                <li class="facebook_logo">
-                    
-                    <a id="facebook" target="_blank" href="https://www.facebook.com/sagitariostorebo">
-                        <img src="./iconos/facebook.png" alt="logo_facebook" width="50px" height="50px">
-                        <p>Visita la pagina</p>
-                    </a>
-                  
-                  
-                </li>
-                <li class="whatsapp_logo">
-                    <a target="_blank" href="">
-                        <img src="./iconos/whatsapp.png" alt="logo_whatsapp" width="50px" height="50px">
-                        <p>Chatea en whatsapp</p>
-                    </a>
-                   
-                </li>
-            
-            </ul>
+        <div class="footer-wraper">
+            <div class="letrero">
+                <h1>Contáctanos</h1>
+            </div>
+           
+            <div class="RedesSociales">
+                <ul>
+                    <li class="facebook_logo">
+                        <a id="facebook" target="_blank" href="https://www.facebook.com/sagitariostorebo">
+                            <img src="./iconos/facebook.png" alt="logo_facebook" width="50px" height="50px">
+                            <p>Visita la página</p>
+                        </a>
+                    </li>
+                    <li class="whatsapp_logo">
+                        <a target="_blank" href="">
+                            <img src="./iconos/whatsapp.png" alt="logo_whatsapp" width="50px" height="50px">
+                            <p>Chatea en WhatsApp</p>
+                        </a>
+
+                    </li>
+                    <li class="whatsapp_logo">
+                        <a target="_blank" href="">
+                            <img src="./iconos/whatsapp.png" alt="logo_whatsapp" width="50px" height="50px">
+                            <p>Únete a nuestro grupo de WhatsApp</p>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
-  
+
 </body>
 
 
