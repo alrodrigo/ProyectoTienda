@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
 :root {
-    --Medio: #25d028;
+    --morado: #4e4ea5;;
     --fondo: #ffffff;
     --gris_oscuro: #333333;
     --black: #000000;
     --Azul_pastel: #ADD8E6;
     --Azul_oscuro: #00008B;
     --sm: 14px;
-    --md: 16px;
-    --lg: 18px;
+    --md: 18px;
+    --lg: 21px;
     --colorfiltro: invert(29%) sepia(6%) saturate(6491%) hue-rotate(205deg) brightness(106%) contrast(93%);
 }
 *{
@@ -36,7 +36,6 @@ body{
     background-color: rgba(0, 0, 0, 0.8); 
     height: 130px;
     top: 0;
-    
 }
 .navbar-left {
     flex-grow: 1;
@@ -60,14 +59,55 @@ body{
 .navbar-user, .navbar-shopping-cart{
     filter:  invert(29%) sepia(6%) saturate(6491%) hue-rotate(205deg) brightness(106%) contrast(93%);
 }
-.navbar-left ul li a,.navbar-right ul li a{
+.navbar-left ul li a,.navbar-right ul li a {
     text-decoration: none;
     padding: 4px;
-    color:  #4e4ea5;
+    color:  var(--fondo);
     font-size: var(--lg);
-   text-transform: uppercase;
+    text-transform: uppercase;
+    background-color: inherit;
+}
+.drop-down-menu .drop-down-button{
+    font-size: var(--lg);
+    text-transform: uppercase;
+    background-color: inherit;
+    color: var(--fondo);
+    padding: 1rem 1 rem;
+    border: none;
+}
+.drop-down-button:hover,.navbar-left ul li a:hover,.navbar-right ul li a:hove {
+    float: none;
+    color: var(--fondo);
+    padding: 1rem 1rem;   
+    display: block;
+    border-bottom: 5px var(--morado) solid;
+}
+.drop-down-menu-content{
+    display: none;
+    position: absolute;
+    background-color: var(--morado);
+    min-width: 10rem;
+    margin-top: 5px;
+    box-shadow: 0 .0rem 1rem 0 rgba(0, 0, 0, 0.2);
+    z-index:1;
 
 }
+.drop-down-menu-content a{
+    float: none;
+    color: var(--black);
+    padding: 1rem 1rem;
+    margin-bottom: 10px;
+    display: block;
+}
+.drop-down-menu-content:hover {
+    background-color: var(--morado);
+    color: white;
+
+}
+.drop-down-menu:hover .drop-down-menu-content{
+    display: block;
+}
+
 .navbar-left ul li, .navbar-right ul li{
     margin: 10px;
 
@@ -171,7 +211,7 @@ footer{
     background-color: rgba(0, 0, 0, 0.8); 
     position: relative; /* Agrega posicionamiento relativo al footer */
     max-height: 200px;
-    
+    width: 100%;
 }
 .letrero{
     background-color: #4e4ea5;
@@ -192,8 +232,7 @@ footer{
     flex-direction: row;
     margin-top: 10px;
     padding-top: 30px;
-  
-
+    
 
 }
 .facebook_logo a, .whatsapp_logo a{
@@ -203,7 +242,7 @@ footer{
     margin: 10px;
     font-size: 20px;
     color: white;
-    
+    width: 100%;
 }
 .facebook_logo , .whatsapp_logo {
     margin:10px;
@@ -217,13 +256,13 @@ footer{
 }
 .RedesSociales .facebook_logo a:hover{
     border-radius: 10px;
-    border: 5px solid #4267B2 ;
-   background: #4267B2;
+    outline: 5px solid #4267B2 ;
+     background: #4267B2;
     color: #fff; 
 }
 .RedesSociales .whatsapp_logo a:hover{
     border-radius: 5px;
-    border: 5px solid #075E54 ;
+    outline: 5px solid #075E54 ;
     background: #075E54;
     color: #fff; 
 }
@@ -231,6 +270,7 @@ footer{
 @media screen and (width <= 768px) {
     body{
         margin-top: 130px;
+        width: 100%;
     }
     #nav-principal{
         position: fixed;
@@ -262,28 +302,25 @@ footer{
     }
     .navbar-left ul li a,.navbar-right ul li a{
         padding: 2px;
-        color: #4e4ea5;
+        color: white;
         font-size: var(--md);
         text-transform: uppercase;
          
     }
-    #slides{
-        padding: 10px;
-        border: 3px solid #ccc;
-        background: #fff;
-        position: relative;
-        z-index: 1;
-        height: 300px;
-    }
-    #slides .slide img{
-        max-width: 100%;
-        height: 300px;
-
-    }
+   
     .navbar-user img, .navbar-shopping-cart img{
         width: 35px;
         height: 35px;
     
+    }
+    .RedesSociales ul p{
+        font-size: 10px;
+    } 
+    .facebook_logo a, .whatsapp_logo a{
+        display: block;
+        margin: 1px;
+
+
     }
     
 }
