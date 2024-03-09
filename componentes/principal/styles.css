@@ -75,7 +75,7 @@ body{
     padding: 1rem 1 rem;
     border: none;
 }
-.drop-down-button:hover,.navbar-left ul li a:hover,.navbar-right ul li a:hove {
+.drop-down-button:hover,.navbar-left ul li a:hover,.navbar-right ul li a:hover {
     float: none;
     color: var(--fondo);
     padding: 1rem 1rem;   
