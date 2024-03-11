@@ -18,8 +18,11 @@
     font-family: "Commissioner", sans-serif;
 }
 body{
-    background-color: var(--fondo);
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+
 }
 .navbar-logo{
   width: 125px;
@@ -123,90 +126,33 @@ body{
 .navbar-right .button_menu input, .menu_icon{
     display: none;
 }
-.oferts{
-    display: flex;
-    justify-content: center;
-}
-.products-container{
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 10px;
-
-}
-.product-card{
-    border-radius: 10px;
-    border-style: solid;
-    border-color: var(--gris_oscuro);
-    background-color: #4e4ea5;
-    margin: 10px;
-    padding: 7px;
-}
-
+/* end-navbar //// */
+/* begin principal  */
 h1{
     text-align: center;
-    margin: 10px;
-    padding: 5px;
 }
 .container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  margin: 10px;
-  padding: auto;
-}
-.slider{
-    position: relative;
-    width: 700px;
-    height: 300px;
-    background-color: #e0e0e0;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66) ;
-    border-radius: 15px;
-    overflow: hidden ;
-}
-.carruseles{
-    width: 300%;
-    height: 100%;
-    display: flex;
-    
-}
-.slider-section{
-    width: calc(100%/3);
-}
-.slider-section img{
-    width: 100%;
-    height: 100%;
-    object-fit: fill ;
-}
-.btn-left , .btn-right{
-    
-    display: flex;
-    padding: 10px;
-    position: absolute;
-    top: 50%;
-    font-size: 3.5rem;
-    background-color: transparent;
-    border-radius: 30%;
-    padding: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transform:  translate(0, -50%);
-    transition: .5s ease;
-    user-select: none;
-}
-.btn-left:hover, .btn-right:hover{
-  background-color: #333333d4;
-  color: rgb(197, 20, 20);
+  flex: 1;
+  margin: 30px;
 
 }
-.btn-left{
-    left: 10px;
+.products-container{
+    margin: 10px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+   justify-content: center;
 }
-.btn-right{
-    right: 10px;
+.product-card{
+    margin: 20px;
+    border: 10px outset var(--morado);
 }
+.product-details{
+    text-align: center;
+    font-size: var(--md);
+    font-weight: bold;
+}
+
 footer{
     background-color: rgba(0, 0, 0, 0.8); 
     position: relative; /* Agrega posicionamiento relativo al footer */
